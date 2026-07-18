@@ -8,7 +8,7 @@ test('facebook', async ({ page }) => {
 
     await page.goto('https://www.facebook.com/login/');
 
-    await page.locator('//input[@name="email"]').fill('ram');
+    await page.locator('//input[@name="email"]').fill('ram SHOULD FAIL');
     await page.locator('//input[@name="pass"]').fill('ram@123')
     await page.getByRole('button', { name: 'Log in' }).click();
      await page.waitForTimeout(3000);
